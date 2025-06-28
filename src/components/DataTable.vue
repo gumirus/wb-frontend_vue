@@ -103,4 +103,36 @@ button:disabled {
   opacity: 0.5;
   cursor: default;
 }
+
+@media (max-width: 768px) {
+  table {
+    font-size: 0.75rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding: 0.4rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+table::-webkit-scrollbar {
+  height: 6px;
+}
+
+table::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
 </style>

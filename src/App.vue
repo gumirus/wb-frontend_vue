@@ -40,3 +40,6 @@ nav a.router-link-active {
   border-bottom: 2px solid black;
 }
 </style>
+
+nav { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;
+justify-content: center; } nav a { font-size: 1rem; }
