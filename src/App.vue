@@ -1,21 +1,42 @@
 <template>
-  <div>
+  <div class="app">
     <nav>
-      <router-link to="/incomes">Incomes</router-link> |
-      <router-link to="/orders">Orders</router-link> |
-      <router-link to="/sales">Sales</router-link> |
-      <router-link to="/stocks">Stocks</router-link>
+      <RouterLink to="/incomes">Incomes</RouterLink>
+      <RouterLink to="/orders">Orders</RouterLink>
+      <RouterLink to="/sales">Sales</RouterLink>
+      <RouterLink to="/stocks">Stocks</RouterLink>
     </nav>
-    <router-view />
+
+    <main>
+      <RouterView />
+    </main>
   </div>
 </template>
 
-<style>
-nav {
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+</script>
+
+<style scoped>
+.app {
+  font-family: sans-serif;
   padding: 1rem;
-  background-color: #f0f0f0;
 }
-a {
-  margin-right: 1rem;
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+nav a.router-link-active {
+  color: black;
+  border-bottom: 2px solid black;
 }
 </style>
